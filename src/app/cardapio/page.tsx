@@ -476,6 +476,16 @@ export default function CardapioPage() {
 
         </>
       )}
+
+      {/* Footer */}
+      <footer className="mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-400 space-y-2">
+        <p className="font-semibold text-gray-500">
+          Site desenvolvido para a disciplina Gestão de Negócios e Empreendedorismo
+        </p>
+        <p className="max-w-2xl mx-auto leading-relaxed">
+          <strong>Grupo:</strong> Ana Julia Cordeiro Alvarenga, Bruna Letícia Oliveira Silva, Fernanda Lauane Marques Gomes, Gabriela de Lima, Gustavo Oliveira Resende, Laura Aparecida Araújo Dutra, Lérida de Oliveira, Lucas Gomes Sousa Mota, Maria Olívia Sousa Vilela, Rosana Rodrigues Teixeira Andrade, Valentina Maria Silva Villas Bôas
+        </p>
+      </footer>
     </div>
   );
 }
