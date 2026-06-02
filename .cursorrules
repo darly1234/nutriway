@@ -1,0 +1,29 @@
+# NutriWay — Regras para o Cursor AI
+
+## Stack
+- Next.js 14 App Router + TypeScript + Tailwind CSS
+- Zustand para estado global (src/lib/store.ts)
+- Recharts para gráficos
+- Lucide React para ícones
+
+## Padrões de código
+- Todos os componentes de página usam `"use client"` (estado reativo)
+- Cores: use variáveis Tailwind definidas em tailwind.config.ts
+- Módulo Cardápio: verde (#27ae60)
+- Módulo Hidrata+: azul (#185fa5)
+- Módulo NutriMeta: âmbar (#ba7517)
+- Módulo CarboControl: vermelho escuro (#993c1d)
+
+## Estrutura de estado (Zustand)
+- Nunca acesse localStorage diretamente — use o store
+- Adicionar novos campos: edite src/lib/store.ts + src/types/index.ts
+
+## Base de dados nutricional
+- TACO: array estático em src/lib/nutrition.ts (TACO_FOODS)
+- Open Food Facts: função searchOpenFoodFacts() — busca em tempo real
+- Hierarquia: TACO > Open Food Facts > manual
+
+## Integrações entre módulos (manter sempre)
+- Cardápio confirmado → addMealEntry() para cada item (sincroniza CarboControl)
+- Alimentos com water_pct alto → somam em todayWaterFromFood() (desconta do Hidrata+)
+- addBodyMetric() → atualiza profile.weight_kg (afeta waterGoal() do Hidrata+)

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-syne: "Syne", sans-serif;
+    --font-sans: "DM Sans", sans-serif;
+    --font-mono: "DM Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  body { @apply bg-gray-50 text-gray-900; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm p-5;
+  }
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-600 text-white font-medium px-4 py-2 rounded-xl transition-colors duration-150;
+  }
+  .btn-ghost {
+    @apply border border-gray-200 hover:bg-gray-50 text-gray-700 font-medium px-4 py-2 rounded-xl transition-colors duration-150;
+  }
+  .input {
+    @apply w-full border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition;
+  }
+  .module-badge {
+    @apply text-xs font-medium px-2.5 py-0.5 rounded-full;
+  }
+  .section-title {
+    @apply font-syne font-bold text-xl text-green-800 mb-1;
+  }
+  .section-sub {
+    @apply text-sm text-gray-500 mb-6;
+  }
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 1s ease;
+}
+
+/* Fade up animation for cards */
+.animate-fade-up {
+  animation: fadeUp 0.4s ease forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
