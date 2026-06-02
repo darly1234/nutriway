@@ -369,7 +369,7 @@ export default function CardapioPage() {
           </button>
           
           <p className="text-xs text-gray-400">
-            Cardápios gerados com base em alimentos da TACO (UNICAMP) de forma alternada para diversificar as suas refeições.
+            Cardápios gerados com base em alimentos da TACO (UNICAMP) de forma alternada para diversificar as suas refeições. Estimativas de preços baseadas na média de supermercados locais e dados de mercado regional.
           </p>
         </div>
       )}
